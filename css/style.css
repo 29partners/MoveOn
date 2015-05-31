@@ -138,3 +138,111 @@ Features List
 .feature-icon i {
     color: #4e9ba3
 }
+
+/* ==========================================================================
+Showcase
+========================================================================== */
+.showcase {
+    background: url('../img/statement1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+.showcase h1 {
+    margin: 0 0 20px 0;
+    color: #fff;
+    font-weight: 400;
+    font-size: 31px;
+}
+.showcase h4{
+    margin-bottom: 25px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.showcase-wrap {
+    position: relative;
+    padding: 100px 0;
+    min-height: 350px;
+}
+.screenshots-intro {
+    padding: 170px 0 100px 0;
+    background-color: #f6f7f9;
+}
+
+/* ==========================================================================
+Navigation
+========================================================================== */
+.site-navigation {
+    border: none;
+    display: block;
+    float: right !important;
+}
+.site-navigation > ul > li{
+    height: 45px;
+    float: left;
+    margin: 10px;
+    position: relative;
+}
+.site-navigation > ul > li > a{
+    font-size: 20px;
+    color: #FFF;
+    display: inline;
+    margin: 0;
+    padding: 30px 15px;
+}
+
+.site-navigation ul {
+    list-style: none;
+    padding: 10px 0 0 0;
+}
+.site-navigation > ul > li > a {
+    text-transform: uppercase;
+}
+.site-navigation > ul a {
+    color: #000000;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 3px 0;
+    padding: 5px 0;
+    text-decoration: none !important;
+}
+.site-navigation > ul > li:hover a{
+    color: #428bca;
+}
+
+a {
+    text-decoration: none;
+}
+.site-navigation > ul > li:after {
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    content: "";
+    display: block;
+    float: right;
+    height: 38px;
+    position: absolute;
+    right: -11px;
+    top: -7px;
+    width: 34px;
+}
+/* ==========================================================================
+Logo
+========================================================================== */
+.left-nav-align{
+    float:left;
+}
+.right-nav-align{
+    float : right;
+}
+.logo-wrap a{
+    text-decoration: none;
+}
+.logo-wrap a:hover{
+    color: #FFF !important;
+}
+
+.truckon-rent-logo{
+    font-family: Yesteryear;
+    font-weight: 300;
+    color:#FFF;
+    font-size: 50px;
+}
