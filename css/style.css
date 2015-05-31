@@ -183,16 +183,16 @@ Navigation
     position: relative;
 }
 .site-navigation > ul > li > a{
-    font-size: 14px;
+    font-size: 20px;
     color: #FFF;
     display: inline;
     margin: 0;
-    padding: 30px 10px;
+    padding: 30px 15px;
 }
 
 .site-navigation ul {
     list-style: none;
-    padding: 0;
+    padding: 10px 0 0 0;
 }
 .site-navigation > ul > li > a {
     text-transform: uppercase;
@@ -206,6 +206,10 @@ Navigation
     padding: 5px 0;
     text-decoration: none !important;
 }
+.site-navigation > ul > li:hover a{
+    color: #428bca;
+}
+
 a {
     text-decoration: none;
 }
