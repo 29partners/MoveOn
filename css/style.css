@@ -64,6 +64,7 @@ Buttons
     background-color: #fff;
     color: #4b98a9;
     font-size: 16px;
+    border: 0;
 }
 .use-btn:hover, .use-btn:focus {
     background-color: #73d0da;
@@ -108,7 +109,6 @@ Book Form Box
     font-size: 1.929em;
     height: 62px;
     padding: 6px 18px;
-    color: #808080;
     background: none;
 }
 .book-container{
@@ -122,6 +122,18 @@ Book Form Box
 .book-container input{
     display: inline-block;
     margin-bottom:50px;
+}
+#from-location::-webkit-input-placeholder{
+    color:#fff;
+}
+#to-location::-webkit-input-placeholder{
+    color:#fff;
+}
+#from-location::-moz-placeholder{
+    color:#fff;
+}
+#to-location::-moz-placeholder{
+    color:#fff;
 }
 
 /* ==========================================================================
@@ -291,7 +303,6 @@ Footer
     padding-top: 40px;
     font-size: 14px;
     position: relative;
-    z-index: 20;
 }
 
 .footer .has-divider {
@@ -436,4 +447,91 @@ a.btn-ghost .fa, .btn-ghost .fa {
 }
 .book-cont{
     text-align: center;
+}
+
+/*========================================================================
+Overlay
+==========================================================================*/
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(75, 152, 169, 0.9);
+    z-index: 1000;
+
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    overflow: hidden;
+    border: none;
+    background: url(../img/cross.png) no-repeat center center;
+    text-indent: 200%;
+    color: transparent;
+    outline: none;
+    z-index: 100;
+}
+.overlay-scale {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+    transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+}
+
+.overlay-scale.open {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+    transition: transform 0.4s, opacity 0.4s;
+}
+.overlay nav {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    height: 60%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    height: 100%;
+    position: relative;
+}
+
+.overlay ul li {
+    display: block;
+    height: 20%;
+   /* height: calc(100% / 5);*/
+    min-height: 54px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.overlay ul li a {
+    font-size: 54px;
+    font-weight: 300;
+    display: block;
+    color: #fff;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+    color: #f0f0f0;
 }
