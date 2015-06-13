@@ -1,3 +1,14 @@
+body, html {
+    font-family: "Roboto",Helvetica,Arial,Sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    /*background-color: #fff;*/
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
 /* ==========================================================================
   Logo-Head - hero
 ========================================================================== */
@@ -8,14 +19,14 @@
 
 .head {
     position: relative;
-    padding: 60px 0 60px 0;
+    padding: 200px 0 60px 0;
     min-height: 800px;
     background: rgb(40, 70, 102) url('../img/head-01.jpg') no-repeat center center;
     background-size: cover;
     color: #fff;
 }
 .head h1 {
-    margin: 200px 0 45px 0;
+    margin: 100px 0 45px 0;
     font-weight: 300;
     font-size: 45px;
 }
@@ -35,7 +46,13 @@
     background-color: transparent;
     z-index: 1000;
     width: 100%;
-    padding: 60px 0 60px 0;
+    padding-top: 20px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 .nav-home.nav-head{
     position: absolute;
@@ -53,6 +70,26 @@ div.transparent.top-bar, nav.bg-transparent {
     transition: all 0.2s ease-in-out;
 }*/
 
+.sticky-header{
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+    /*padding-top: 10px;*/
+    background: rgba(63, 97, 132,0.96);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.sticky-header .site-navigation > ul > li > a{
+    font-size: 19px;
+}
+.sticky-header .logo-wrap .truckon-rent-logo{
+    font-size: 45px;
+}
 /* ==========================================================================
 Buttons
 ========================================================================== */
@@ -115,25 +152,36 @@ Book Form Box
     border: 1px solid #fff;
     position: relative;
     text-align: center;
-    margin-top: 100px;
     padding-top: 50px;
     padding-bottom: 50px;
+    box-shadow: 0 0 31px 0 rgba(0,0,0,0.45);
+    -webkit-box-shadow:0 0 31px 0 rgba(0,0,0,0.45);
+    -moz-box-shadow:0 0 31px 0 rgba(0,0,0,0.45);
 }
 .book-container input{
     display: inline-block;
     margin-bottom:50px;
 }
+.book-cont-title{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
 #from-location::-webkit-input-placeholder{
     color:#fff;
+    font-family: "Roboto",Helvetica,Arial,Sans-serif;
 }
 #to-location::-webkit-input-placeholder{
     color:#fff;
+    font-family: "Roboto",Helvetica,Arial,Sans-serif;
 }
 #from-location::-moz-placeholder{
     color:#fff;
+    font-family: "Roboto",Helvetica,Arial,Sans-serif;
 }
 #to-location::-moz-placeholder{
     color:#fff;
+    font-family: "Roboto",Helvetica,Arial,Sans-serif;
 }
 
 /* ==========================================================================
@@ -252,7 +300,7 @@ Navigation
 a {
     text-decoration: none;
 }
-.site-navigation > ul > li:after {
+/*.site-navigation > ul > li:after {
     border-right: 1px solid rgba(0, 0, 0, 0.05);
     content: "";
     display: block;
@@ -262,7 +310,7 @@ a {
     right: -11px;
     top: -7px;
     width: 34px;
-}
+}*/
 /* ==========================================================================
 Logo
 ========================================================================== */
@@ -332,10 +380,10 @@ Footer
 }
 a {
     color: #ec6952;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
 }
 .footer .footer-col.links .fa {
     margin-right: 5px;
@@ -454,13 +502,18 @@ Overlay
 ==========================================================================*/
 .overlay {
     position: fixed;
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 90%;
     top: 0;
     left: 0;
-    background: rgba(75, 152, 169, 0.9);
+    right: 0;
+    bottom: 0;
+   /* background: rgba(75, 152, 169, 0.9);*/
+    background: rgba(255, 255, 255, 0.99);
     z-index: 1000;
-
+    margin: auto;
+    padding: 15px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
 }
 
 /* Overlay closing cross */
@@ -534,4 +587,15 @@ Overlay
 .overlay ul li a:hover,
 .overlay ul li a:focus {
     color: #f0f0f0;
+}
+.address-container{
+    padding: 10px;
+}
+
+/*==============================================
+MAPS OVERLAY
+=================================================*/
+#map-canvas {
+    width: 100%;
+    height: 70%;
 }
