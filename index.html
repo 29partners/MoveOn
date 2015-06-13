@@ -2,13 +2,14 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Truck on Rent</title>
+    <title>TruckOnRent</title>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yesteryear">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Yesteryear">
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,700" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -18,13 +19,18 @@
     <script src="js/tr-home.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 
+    <style>
+
+    </style>
+
+
 </head>
 <body>
 <header class="nav-head nav-home">
         <div class="container">
             <div class="row">
                 <div class="logo-wrap left-nav-align">
-                    <a href="#" class="truckon-rent-logo">TruckOn Rent<!--<img src="img/logo-white.png" alt="Move On Logo">--></a>
+                    <a href="#" class="truckon-rent-logo">TruckOnRent<!--<img src="img/logo-white.png" alt="Move On Logo">--></a>
                 </div>
                 <div class="right-nav-align">
                     <nav class="site-navigation">
@@ -40,7 +46,7 @@
         </div>
 </header>
 <section class="head">
-        <div class="texture-overlay"></div>
+        <!--<div class="texture-overlay"></div>-->
         <div class="container">
 
             <div class="row">
@@ -49,6 +55,7 @@
                     <a href="#about" class="learn-btn animated fadeInUp">Learn more <i class="fa fa-arrow-down"></i></a>
                 </div>
                 <div class="col-md-5 book-container animated fadeInDown">
+                    <div><p class="book-cont-title">BOOK OUR CARRIERS INSTANTLY</p></div>
                     <input id="from-location" type="text" value="" class="input-control" placeholder="Pick up location"/>
                     <input id="to-location" type="text" value="" class="input-control" placeholder="Drop location"/>
                     <div><button id="home-bookNow" class="use-btn" type="button">Book now</button></div>
@@ -88,8 +95,7 @@
                     </div>
                     <div class="feature-content">
                         <h1>Hassle Free</h1>
-
-                        <p>Moving goods is as easy as ordering a cab! Fixed prices. Pay for the time you use. </p>
+                        <p>We are just click away. Check our pricing and book. Our driver will be at your home </p>
                         <a href="#" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a>
                     </div>
                 </div>
@@ -120,7 +126,6 @@
 
                 <p>We will take care of your cargo or your passenger and deliver them safe and on time,
                     we will take care of your cargo or your passenger and deliver them safe and on time</p>
-                </p>
             </div>
         </div>
     </div>
@@ -128,7 +133,10 @@
 
 <div class="overlay overlay-scale">
     <button type="button" class="overlay-close">Close</button>
-
+    <!--<div class="address-container">-->
+        <div id="map-canvas"></div>
+        <div id="address-getter"></div>
+    <!--</div>-->
 </div>
 
 <footer class="footer">
